@@ -9,6 +9,7 @@ import GamePage from "../screens/GamePage";
 import RewardPage from "../screens/RewardPage";
 import ProfilePage from "../screens/ProfilePage";
 
+// bottom tab navigator
 const Tab = createBottomTabNavigator();
 
 const BottomTabNavigation = () => {
@@ -47,9 +48,11 @@ const BottomTabNavigation = () => {
           backgroundColor: colors.tabBar,
           borderTopColor: "transparent",
         },
+        // hide the top header
         headerShown: false,
       })}
     >
+      {/* Define tab screens */}
       <Tab.Screen name="Home" component={MainPage} />
       <Tab.Screen name="Games" component={GamePage} />
       <Tab.Screen name="Rewards" component={RewardPage} />

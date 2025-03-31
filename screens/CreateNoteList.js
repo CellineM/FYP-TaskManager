@@ -7,17 +7,24 @@ import {
   StyleSheet,
   ScrollView,
 } from "react-native";
+// firebase - setting up for both authentication and database
 import { db, auth } from "../firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
+
+// icon library for UI
 import Icon from "react-native-vector-icons/Ionicons";
+// importing the theme
 import { useMode } from "../background/modeTheme";
 
 const CreateNoteList = ({ navigation }) => {
+  // stroing the note and its content
   const [title, isTitle] = useState("");
   const [noteDetails, isnoteDetails] = useState("");
+  // used for toggling between light and dark mode
   const { mode } = useMode();
   const isDark = mode === "dark";
 
+  // saving the note into the firestore
   const saveNote = async () => {
     if (!title.trim()) {
       alert("Enter the title Please");

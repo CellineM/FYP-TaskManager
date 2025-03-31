@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { View, Text, TouchableOpacity, StyleSheet, FlatList, Dimensions, Modal} from "react-native";
-import { Audio } from "expo-av"; // 🔊 For playing audio
+import { Audio } from "expo-av"; // For playing audio
 import { useNavigation } from "@react-navigation/native";
 import { db, auth } from "../firebaseConfig";
 import { doc, getDoc, setDoc } from "firebase/firestore";
@@ -68,7 +68,7 @@ const Game1 = () => {
     try {
       await loseSound.current.unloadAsync();
       await loseSound.current.loadAsync(require("../assets/sound/lose.mp3"));
-      await loseSound.current.setIsLoopingAsync(false); // just to be safe
+      await loseSound.current.setIsLoopingAsync(false); 
       await loseSound.current.playAsync();
     } catch (err) {
       console.error("Error playing lose sound:", err);

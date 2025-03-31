@@ -15,7 +15,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { auth, db } from '../firebaseConfig';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { Audio } from 'expo-av'; // 🔊 Sound
+import { Audio } from 'expo-av';
 
 const Game2 = ({ navigation }) => {
   const [targetWord, isTargetWord] = useState('');
