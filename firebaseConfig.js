@@ -5,15 +5,15 @@ import ReactNativeAsyncStorage from "@react-native-async-storage/async-storage";
 
 // DO NOT PUSH THIS TO GITHUB, only add it to .gitignore 
 
+// Firebase config is loaded from environment variables (from .env file)
 const firebaseConfig = {
-  apiKey: "AIzaSyDOPXJFbRKD9EcKgUNuZoqtZ1--XxDJ6rg",
-  authDomain: "taskmanager-c668b.firebaseapp.com",
-  projectId: "taskmanager-c668b",
-  storageBucket: "taskmanager-c668b.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "1:48699675668:android:f722faad3f510b1c0c8301"
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID,
 };
-
 const app = initializeApp(firebaseConfig);
 const auth = initializeAuth(app, {
   persistence: getReactNativePersistence(ReactNativeAsyncStorage)
