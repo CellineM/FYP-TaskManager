@@ -30,8 +30,8 @@
 
 ---
 ## Steps!
-npm install
-Create a file named firebaseConfig.js. Fill in with your firebase configuration details
+- npm install
+- Create a file named firebaseConfig.js. Fill in with your firebase configuration details
 
 
 
